@@ -1,0 +1,239 @@
+
+
+.container {
+    display: flex;
+  flex-direction: column; /* O row, a seconda del layout */
+  justify-content: center; /* Centra il contenuto */
+  align-items: center;
+  flex-wrap: wrap;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: 150px;
+    background: white;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    
+}
+
+span{
+    color: #00d397;
+}
+
+.container hr{
+    height: 2px;
+    border: none;
+    background: #707070;
+}
+.container h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.container ul li{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding-left: 15px;
+    border: 1px solid;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+.container button{
+margin: auto;
+width: 80%;
+height: 50px;
+background-color: #553f9a;
+color: white;
+border-radius: 8px;
+cursor: pointer;
+font-weight: 500;
+font-size: 18px;
+border: none;
+
+}
+.container button:hover {
+    background-color: #44317c;
+  }
+
+.container .index{
+margin: auto;
+font-size: 15px;
+}
+
+.container .correct{
+    background: #dffff2;
+    border-color: #00d397;
+}
+.container .wrong {
+    background: #ffebeb;
+    border-color: #ff4a4a;
+}
+
+@keyframes move-horizontal {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+  
+  .rotating-horizontal {
+    animation: move-horizontal 10s linear infinite;
+    width: 40px;  /* Imposta la dimensione desiderata */
+    margin-right: 10px;
+  }
+  .index, .score {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #000;
+  }
+
+  .quiz-end {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;/* Occupare tutta l'altezza della schermata */
+  }
+  
+  .quiz-end h2 {
+    font-size: 1.2rem;
+    justify-items: center;
+    text-align: center;
+    color: #333;
+  }
+  
+  .quiz-end p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #444;
+    text-align: center;
+  }
+  
+  .quiz-end button {
+    background-color: #553f9a;
+    border-radius: 5px;
+    margin-top: 20px;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .quiz-end button:hover {
+    background-color: #44317c;
+  }
+
+  .quiz-content {
+    margin-top: 20px;
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .option {
+    background-color: #f0f8ff;
+    
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .options li {
+    background-color: #f0f8ff;
+   
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    list-style: none;
+    width: 45%; /* Adatta per schermi grandi */
+  }
+  
+  .options li:hover {
+  
+    transform: scale(1.05);
+  }
+  
+ 
+  
+
+  .score {
+    margin-top: 4px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Per centratura verticale e orizzontale */
+      width: 90%;
+      padding: 15px;
+      margin: 20px auto; /* Centrato rispetto alla pagina */
+      text-align: center; /* Testo centrato */
+    }
+  
+    .options {
+      display: flex;
+      flex-direction: column; /* Disposizione verticale delle opzioni */
+      align-items: center; /* Centratura orizzontale delle opzioni */
+      width: 100%;
+    }
+  
+    .options li {
+      width: 90%; /* Adattamento della larghezza */
+      font-size: 1rem;
+      margin-bottom: 10px;
+      padding: 10px; /* Aggiunta di padding per migliorare leggibilità */
+      border: 1px solid #ccc; /* Bordo per evidenziare i riquadri */
+      border-radius: 8px;
+      text-align: center; /* Testo centrato all'interno del riquadro */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Effetto leggero di ombra */
+    }
+  
+    .rotating-horizontal {
+      width: 30px; /* Riduzione dimensione dell'elemento rotante */
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      width: 100%; /* Pulsante a tutta larghezza */
+    }
+  
+    .score {
+      font-size: 1.2rem; /* Riduzione dimensione del punteggio */
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 1024px) { /* Per iPad in orizzontale */
+    .container {
+      width: 90%; /* Usa una larghezza percentuale per adattarsi alla dimensione dello schermo */
+      margin-top: 80px;
+    }
+  }
+  
